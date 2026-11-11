@@ -1,0 +1,21 @@
+{
+  "name": "superdoc-repros",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "fixtures": "python3 scripts/make_fixtures.py",
+    "repro:selection": "node repro/selection-deleted-field.mjs",
+    "repro:undo": "node repro/undo-redo-race.mjs",
+    "repro:redo": "node repro/redo-tracked-insertion.mjs",
+    "repro:diff": "node repro/diff-compare-deleted-rows.mjs",
+    "repro": "npm run repro:selection; npm run repro:undo; npm run repro:redo; npm run repro:diff"
+  },
+  "dependencies": {
+    "superdoc": "2.29.0"
+  },
+  "devDependencies": {
+    "playwright": "1.64.0",
+    "vite": "^7.0.0"
+  }
+}

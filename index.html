@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SuperDoc repros</title>
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; }
+      #bar { padding: 8px 12px; border-bottom: 1px solid #ddd; font-size: 13px; }
+      #editor { height: calc(100vh - 42px); overflow: auto; }
+      #log { color: #b00020; white-space: pre-wrap; }
+    </style>
+  </head>
+  <body>
+    <div id="bar">
+      <a href="?doc=deleted-field">deleted-field</a> ·
+      <a href="?doc=long-document">long-document</a> ·
+      <a href="?doc=deleted-rows">deleted-rows</a> ·
+      <a href="?doc=plain">plain</a>
+      <span id="version"></span>
+      <div id="log"></div>
+    </div>
+    <div id="editor"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
